@@ -14,6 +14,7 @@ class Box extends GameObject {
    if (pos.y <= maxPoint) { 
     pos.y += initialVelocity;
     initialVelocity += acceleration;
+    pos.x += random(- 0.5, 0.5);
    }
  }
  void render() {

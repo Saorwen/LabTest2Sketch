@@ -2,16 +2,19 @@ class Box extends GameObject {
   
  float initialVelocity;
  float acceleration = 0.5;
+ float maxPoint = height/3;
   
- Box(float x, float y, float speed) {
-   super(x, y, speed); // speed still not working
+ Box(float x, float y) {
+   super(x, y);
    
  }
   
  void update() {
    initialVelocity = random(1, 4);
-   pos.y += initialVelocity;
-   initialVelocity += acceleration;
+   if (pos.y <= maxPoint) { 
+    pos.y += initialVelocity;
+    initialVelocity += acceleration;
+   }
  }
  void render() {
    pushMatrix();

@@ -3,7 +3,7 @@ boolean boxDropped = false;
 
 void setup() {
   size(400, 400);
-  gameObjects.add(new Plane(0, 20, 2));
+  gameObjects.add(new Plane(0, 20));
   
 }
 

@@ -1,9 +1,7 @@
-class StickGuy {
-  PVector playerPos;
-  float playerSpeed;
+class StickGuy extends GameObject {
   
-  StickGuy() {
-    
+  StickGuy(float x, float y) {
+    super(x, y);
   }
   
   void update() {

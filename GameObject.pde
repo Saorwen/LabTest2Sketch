@@ -1,10 +1,9 @@
 class GameObject {
   PVector pos;
-  float speed;
+
  
- GameObject(float x, float y, float speed) {
+ GameObject(float x, float y) {
    pos = new PVector(x, y);
-   speed = this.speed;
  }
  
  void update() {

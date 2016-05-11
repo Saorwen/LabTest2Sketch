@@ -1,41 +1,39 @@
-class StickGuy extends GameObject {
+class StickGuy {
+  
+  PVector PlayerPos;
   
   StickGuy(float x, float y) {
-    super(x, y);
+    PlayerPos = new PVector(x, y);
   }
   
   void update() {
     if (keyPressed) {
+     if (PlayerPos.y >= 95) { 
       if (key == 'w') {
-        pos.y -= 1;
+        PlayerPos.y -= 1;
+      }
     }
     if (key == 'a') {
-      pos.x -= 1;
+      PlayerPos.x -= 1;
     }
     if (key == 'd') {
-      pos.x += 1;
+      PlayerPos.x += 1;
     }
     if (key == 's') {
-      pos.y += 1;
+      PlayerPos.y += 1;
     }
    }
+   
+   println(PlayerPos.y);
  }
   
   void render() {
     pushMatrix();
-    translate(pos.x, pos.y);
+    translate(PlayerPos.x, PlayerPos.y);
     fill(255, 0, 100);
-    rect(pos.x, pos.y, 15, 30);
+    rect(PlayerPos.x, PlayerPos.y, 15, 30);
     popMatrix();
   }
-/*  
-  void collide() {
-    if (dist(pos.x, pos.y, Box.pos.x, Box.pos.y) < 30) {
-      boxDropped = false;
-    }
-  }
-  
-  doen't work yet.
-  */
+
   
 }

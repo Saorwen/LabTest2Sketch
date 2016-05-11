@@ -4,13 +4,16 @@ boolean boxDropped = false;
 void setup() {
   size(400, 400);
   gameObjects.add(new Plane(0, 20));
-  gameObjects.add(new StickGuy(30, height/4));
   clouds = new ArrayList<Cloud>();
   for (int i = 0; i < 7; i++) {
     clouds.add(new Cloud());
   }
   
+  player = new StickGuy(30, height/4);
+  
 }
+
+StickGuy player;
 
 ArrayList<Cloud> clouds;
 ArrayList<GameObject> gameObjects = new ArrayList<GameObject>();
@@ -33,5 +36,9 @@ void draw() {
     GameObject g = gameObjects.get(i);
     g.render();
     g.update();
+    g.collide();
   }
+  
+  player.update();
+  player.render();
 }

@@ -11,5 +11,8 @@ class GameObject {
  
  void render() {
  }
+ 
+ void collide() {
+ }
   
 }

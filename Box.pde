@@ -28,5 +28,12 @@ class Box extends GameObject {
    rect(pos.x, pos.y, 20, 20);
    popMatrix();
  }
+ /*
+   void collide() {
+    if (dist(pos.x, pos.y, PlayerPos.x, PlayerPos.y) < 30) {
+      boxDropped = false;
+    }
+  }
+  */
   
 }

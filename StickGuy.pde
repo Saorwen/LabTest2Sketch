@@ -28,9 +28,14 @@ class StickGuy extends GameObject {
     rect(pos.x, pos.y, 15, 30);
     popMatrix();
   }
+/*  
+  void collide() {
+    if (dist(pos.x, pos.y, Box.pos.x, Box.pos.y) < 30) {
+      boxDropped = false;
+    }
+  }
   
-//  void collide() {
-//    if (dist(pos.x, pos.y,)) {
-//  }
+  doen't work yet.
+  */
   
 }

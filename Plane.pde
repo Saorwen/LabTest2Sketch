@@ -9,12 +9,22 @@ class Plane extends GameObject {
    if (pos.x >= width) {
       pos.x = -10;
    }
+  if (!boxDropped) { 
+   if (keyPressed) {
+     if (key == ' ') {
+       Box b = new Box(pos.x, pos.y, speed);
+       gameObjects.add(b);
+       boxDropped = true;
+     }
+   }
+  }
  }
  
  void render() {
    pushMatrix();
    fill(100);
    translate(pos.x, pos.y);
+   rectMode(CENTER);
    rect(pos.x, pos.y, 80, 20);
    popMatrix();
  }

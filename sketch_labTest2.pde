@@ -1,3 +1,5 @@
+boolean boxDropped = false;
+
 
 void setup() {
   size(400, 400);
@@ -11,6 +13,7 @@ void draw() {
   background(50, 190, 255);
   noStroke();
   fill(0, 255, 0);
+  rectMode(CORNER);
   rect(-1, height/2, width, height/2);
   
   for (int i = 0; i < gameObjects.size(); i++) {
